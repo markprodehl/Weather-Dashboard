@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <span class="navbar-brand mb-1 h1 text-fluid">Weather Dashboard</span>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row p">
+                    <h2>Search for a City:</h2>
+                    <input type="text" id="citySearch">
+                    <button class="btn btn-success"><span class="fa fa-search"></span>Go!</button>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <hr>
+                        <!-- <div class="list-group" id="search-list"></div> -->
+                        <div class="previousSearchList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="jumbotron" style="padding:32px;">
+                        <h1 id="cityName"></h1>
+                        <p id="date"></p>
+                        <div id="weatherIcon"></div>
+                        <p id="temperature"></p>
+                        <p id="humidity"></p>
+                        <p id="windSpeed"></p>
+                        <p id="uvIndex"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h5 class="card-title">5-Day Forecast:</h5>
+                </div>
+                <div class="row">
+                    <div class="card mt-2" style="width:150px;height:200px;">
+                        <div class="card-body" style="color:white;background-color: rgb(55, 58, 255);">
+                            <div class="forecastDate1"></div>
+                            <div class="weatherIcon1"></div>
+                            <div class="tempForecast1"></div>
+                            <div class="humidityForecast1"></div>
+                        </div>
+                    </div>
+                    <p>-</p>
+                    <div class="card mt-2" style="width:150px;height:200px;">
+                        <div class="card-body" style="color:white;background-color: rgb(55, 58, 255);">
+                            <div class="forecastDate2"></div>
+                            <div class="weatherIcon2"></div>
+                            <div class="tempForecast2"></div>
+                            <div class="humidityForecast2"></div>
+                        </div>
+                    </div>
+                    <p>-</p>
+                    <div class="card mt-2" style="width:150px;height:200px;">
+                        <div class="card-body" style="color:white;background-color: rgb(55, 58, 255);">
+                            <div class="forecastDate3"></div>
+                            <div class="weatherIcon3"></div>
+                            <div class="tempForecast3"></div>
+                            <div class="humidityForecast3"></div>
+                        </div>
+                    </div>
+                    <p>-</p>
+                    <div class="card mt-2" style="width:150px;height:200px;">
+                        <div class="card-body" style="color:white;background-color: rgb(55, 58, 255);">
+                            <div class="forecastDate4"></div>
+                            <div class="weatherIcon4"></div>
+                            <div class="tempForecast4"></div>
+                            <div class="humidityForecast4"></div>
+                        </div>
+                    </div>
+                    <p>-</p>
+                    <div class="card mt-2" style="width:150px;height:200px;">
+                        <div class="card-body" style="color:white;background-color: rgb(55, 58, 255);">
+                            <div class="forecastDate5"></div>
+                            <div class="weatherIcon5"></div>
+                            <div class="tempForecast5"></div>
+                            <div class="humidityForecast5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
