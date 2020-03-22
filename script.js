@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     userCitySearches = JSON.parse(userCitySearches) || []; // look into this a little more
     showSearchHistory();
-    var userInput;
+    // var userInput;
 
 
     //********** */
@@ -31,16 +31,34 @@ $(document).ready(function() {
             url: queryURL,
             method: "GET"
         }).then(function(response) {
-            // **Printing tOBJECT USE AS REFERENCE
+            // **Printing OBJECT USE AS REFERENCE
             console.log(response);
 
-            var data = response;
+            ////***** UVINDEX *****///
+            var cityLat = "lat=" + response.coord.lat;
+            var cityLon = "lon=" + response.coord.lon;
+
+            var uvIndexQueryURL =
+                "https://api.openweathermap.org/data/2.5/uvi?" +
+                "&APPID=b94d8811046274c419745e122971bc95" + "&" + cityLat + "&" + cityLon; // not sure why I had to place my API key in the url
+            //call the UV index api
+            $.ajax({
+                url: uvIndexQueryURL,
+                method: "GET"
+            }).then(function(UVresponse) {
+                $("#uvIndex").text("UV Index: " + UVresponse.value);
+            });
+            //************* */
+
+
+            // var data = response;
             var cityName = response.name; //need to append somewhere
 
-            // var date = $("<p>").text(response.list[0].dt_txt);
+            var date = response.dt; //this is in the incorrect format unix Time
+            console.log(date)
 
-            var icon = response.weather[0].icon;
-            console.log(icon) // need to find out how to display this
+            var icon = response.weather[0].icon; // need to find out how to display this
+            console.log(icon) // 
 
             var dayTemp = "Temperature: " + response.main.temp + " ℉";
             var humidity = "Humidity: " + response.main.humidity + " %";
@@ -48,15 +66,16 @@ $(document).ready(function() {
 
             //added this because searches were adding to each other 
             $("#cityName").empty();
+            $("#date").empty();
+            $("#weatherIcon").empty(); //****still ned to add the weather icon
             $("#temperature").empty();
             $("#humidity").empty();
             $("#windSpeed").empty();
 
-
             //APPEND TO HTML
             $("#cityName").append(cityName);
-            $("#weatherIcon").append(icon + " *this needs to be an icon*");
-            // $("#date").append(date);
+            $("#weatherIcon").append(icon + " *this needs to be an icon*"); //****need to add weather icon
+            $("#date").append(date);
             $("#temperature").append(dayTemp)
             $("#humidity").append(humidity);
             $("#windSpeed").append(windSpeed);
