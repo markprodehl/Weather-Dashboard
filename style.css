@@ -1,3 +1,10 @@
 .jumbotron {
     font-size: small;
+    margin: 0 auto;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+.search {
+    padding-right: 100px;
 }
