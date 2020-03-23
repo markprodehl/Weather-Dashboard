@@ -7,4 +7,18 @@
 
 .search {
     padding-right: 100px;
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    float: none;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+#searchForCity {
+    font-size: 25px;
+    font-weight: bolder;
 }
