@@ -72,7 +72,7 @@ function startScreenAPI() {
         //MUST BE A SHORTCUT FOR THE BELOW*************
         //day 1
         var dateP1 = $("<p>").text(response.list[1].dt_txt);
-        var weatherIcon1 = response.list[3].weather[0].icon;
+        var weatherIcon1 = response.list[1].weather[0].icon;
         var weatherIconImg1 = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + weatherIcon1 + "@2x.png");
         var temperatureP1 = $("<p>").text("Temp: " + response.list[3].main.temp + " ℉");
         var humidityP1 = $("<p>").text("Humidity: " + response.list[3].main.humidity + "%");
@@ -86,13 +86,13 @@ function startScreenAPI() {
         $(".tempForecast1").append(temperatureP1);
         $(".humidityForecast1").append(humidityP1);
 
-        var weatherIconToday = response.list[3].weather[0].icon;
+        var weatherIconToday = response.list[1].weather[0].icon;
         var weatherIconTodayImage = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + weatherIconToday + "@2x.png");
         $("#weatherIcon").empty();
         $("#weatherIcon").append(weatherIconTodayImage);
         //day 2
         var dateP2 = $("<p>").text(response.list[9].dt_txt);
-        var weatherIcon2 = response.list[11].weather[0].icon;
+        var weatherIcon2 = response.list[9].weather[0].icon;
         var weatherIconImg2 = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + weatherIcon2 + "@2x.png");
         var temperatureP2 = $("<p>").text("Temp: " + response.list[11].main.temp + " ℉");
         var humidityP2 = $("<p>").text("Humidity: " + response.list[11].main.humidity + "%");
@@ -107,7 +107,7 @@ function startScreenAPI() {
         $(".humidityForecast2").append(humidityP2);
         //day 3
         var dateP3 = $("<p>").text(response.list[17].dt_txt);
-        var weatherIcon3 = response.list[19].weather[0].icon;
+        var weatherIcon3 = response.list[17].weather[0].icon;
         var weatherIconImg3 = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + weatherIcon3 + "@2x.png");
         var temperatureP3 = $("<p>").text("Temp: " + response.list[19].main.temp + " ℉");
         var humidityP3 = $("<p>").text("Humidity: " + response.list[19].main.humidity + "%");
@@ -122,7 +122,7 @@ function startScreenAPI() {
         $(".humidityForecast3").append(humidityP3);
         //day 4
         var dateP4 = $("<p>").text(response.list[25].dt_txt);
-        var weatherIcon4 = response.list[27].weather[0].icon;
+        var weatherIcon4 = response.list[25].weather[0].icon;
         var weatherIconImg4 = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + weatherIcon4 + "@2x.png");
         var temperatureP4 = $("<p>").text("Temp: " + response.list[27].main.temp + " ℉");
         var humidityP4 = $("<p>").text("Humidity: " + response.list[27].main.humidity + "%");
@@ -137,7 +137,7 @@ function startScreenAPI() {
         $(".humidityForecast4").append(humidityP4);
         //day 5
         var dateP5 = $("<p>").text(response.list[33].dt_txt);
-        var weatherIcon5 = response.list[35].weather[0].icon;
+        var weatherIcon5 = response.list[33].weather[0].icon;
         var weatherIconImg5 = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + weatherIcon5 + "@2x.png");
         var temperatureP5 = $("<p>").text("Temp: " + response.list[35].main.temp + " ℉");
         var humidityP5 = $("<p>").text("Humidity: " + response.list[35].main.humidity + "%");
